@@ -17,4 +17,6 @@ With this explanation above these are the steps I took to developing this consol
 
 5. Prints a the list of selected items with the calculated total
 
+PS: Please test code on your web browser cause "prompt" doesnt run on console. Thank you
+
 Inspired by Tutor ... Sauce-Code 
