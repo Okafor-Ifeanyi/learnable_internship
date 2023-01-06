@@ -25,7 +25,7 @@ How the Code Works
     - eat attribute
     - 1 line gap
 
-This Task is focused around on Inheritance, Abstract, Polymorphism and Encapsulation, the attributes taught in the last Lecture Category. All attributes where included @:
+This Task is focused around on Inheritance, Abstract, Polymorphism and Encapsulation, the attributes taught in the last Lecture Category. All attributes where included
     - Inheritance - line 21, 27, 33, 39 ....
     - Abstraction - line 3 - 5, 15, 18
     - Polymoprhism - line 22 - 25, 28 - 31, 34 - 37 .....
