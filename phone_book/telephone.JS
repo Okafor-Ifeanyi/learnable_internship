@@ -27,7 +27,7 @@ class Telephone {
     }
 
     // This is to add Phone numbers
-    getInstance(number) {
+    addPhoneNumber(number) {
         this.phone_numbers.add(number)
         console.log(`${number} added}`);
     }
@@ -70,7 +70,7 @@ class Observer1 {
     }
     
     printNum(number) {
-        const addNum = Telephone.getInstance(number)
+        const addNum = Telephone.addPhoneNumber(number)
         return addNum
     }
 }
