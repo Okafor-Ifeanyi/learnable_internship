@@ -88,7 +88,7 @@ class Observer2 extends Telephone{
     // DialNumber(number) {
     //     const DailNum = Telephone.dial(number)
     //     return DailNum
-    // }
+    // } 
 }
 
 const test = new Telephone()
