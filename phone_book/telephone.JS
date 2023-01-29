@@ -44,13 +44,7 @@ class Telephone {
         else {
             console.log("Number not found")
         }
-        // try {
-        //     let index = this.phone_numbers.(number);
-        //     console.log(`Now dailing ${this.telephone_book[index]}`);
-        //     return this.notify(`${number} - Dialed`)
-        // }
-        // catch(err) {
-        // }
+        
     }
 
     // This is to get a specific number from the list by its index
@@ -68,35 +62,6 @@ class Observer{
     }
 }
 
-class Observer1 extends Telephone{
-    constructor() { 
-        super()
-        this.observerName = "Bio"
-    }
-    
-    // printNum(number) {
-    //     const addNum = Telephone.addPhoneNumber(number)
-    //     return addNum
-    // }
-}
-
-class Observer2 extends Telephone{
-    constructor() { 
-        super()
-        this.observerName = "Ifeanyi"
-    }
-    // DialNumber(number) {
-    //     const DailNum = Telephone.dial(number)
-    //     return DailNum
-    // } 
-}
-
 const test = new Telephone()
 test.addPhoneNumber("08095220213")
 test.dial("08095220213")
-
-const obs1 = new Observer1()
-obs1.addPhoneNumber("08095220213")
-
-const obs2 = new Observer2()
-obs1.dial("08095220289")
