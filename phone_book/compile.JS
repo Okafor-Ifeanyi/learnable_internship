@@ -1,11 +1,15 @@
 class TelephoneBook {
     constructor() {
         this.telephone_book = [];
+        this.nums = [ 1, 3, 5, 7];
+        
+        
     }
 
+    
     addPhoneNumber(obj) {
         this.telephone_book.push(obj);
-        return console.log()
+        console.log(this.nums.includes(3));
 
     }
 
@@ -105,3 +109,9 @@ class ConcreteObserver extends Observer {
       this.element.checked = value;
     }
   }
+
+  const nums = [ 1, 3, 5, 7];
+  console.log(nums.includes(3));
+
+  const start = new TelephoneBook()
+  start.addPhoneNumber("090344245")
