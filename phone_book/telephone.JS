@@ -1,46 +1,79 @@
-class Telephpne {
+class Telephone {
     constructor() {
-        this.observers = new Set()
+      this.observers = new Set();
+      this.phoneNumbers = new Set();
     }
-
-    addPhoneNUmber (observer) {
-        this.observers.add(observer)
+  
+    // this adds observers
+  
+    addObserver(observer) {
+      this.observers.add(observer);
     }
-
-    removePhoneNumber(observer) {
-        this.observers.delete(observer)
+  
+    //  this removes observers
+  
+    removeObserver(observer) {
+      this.observers.delete(observer);
     }
-
-    notify(context) {
-        for (let observer of this.observers) {
-            observer.update(context)
-        }
+  
+    //  this notifies observers when a number is dialed or printed
+  
+    notifyObserver(context) {
+      for (let observer of this.observers) {
+        observer.dial(context);
+      }
     }
-
-    dial(context) {
-        try {
-            let index = this.observers.indexOf(observer);
-            for (let observer of this.observers) {
-                observer.update(context)
-            }
-            console.log(`Now dailing ${this.telephone_book[index]}`);
-            return this.notify(context)
-        }
-        catch(err) {
-            console.log("Number not found")
-        }
+  
+    // this adds phone_number
+  
+    addPhoneNumber(phone_number) {
+      this.phoneNumbers.add(phone_number);
     }
-
-    get(index) {
-        if (index > -1 && index < this.observers.length) {
-            return this.observers[index];
-        }
+  
+    // this removes phone number
+    removePhoneNumber(phone_number) {
+      this.phoneNumbers.delete(phone_number);
     }
-}
-
-class Observer{
-    constructor() { }
-    update() {
-
+  
+    // this dials a number and checks if the number is in the database
+    dialPhoneNumber(phone_number) {
+      if (this.phoneNumbers.has(phone_number)) {
+        this.notifyObserver(phone_number);
+      } else {
+        console.log("This phone number is not registered in the database");
+      }
     }
-}
+  }
+  
+  //   this prints the phone number
+  class PrintNumber {
+    constructor() {
+      this.observerName = "Chinyere";
+    }
+  
+    dial(phone_number) {
+      console.log(
+        `This is the registered number: ${phone_number} and ${this.observerName} is printing ${phone_number}`
+      );
+    }
+  }
+  
+  //   this class dials the phone number
+  class DialNumber {
+    constructor() {
+      this.observerName = "Adanma";
+    }
+  
+    dial(phone_number) {
+      console.log(`${this.observerName} is now dialing ${phone_number}`);
+    }
+  }
+  
+  const telephone = new Telephone();
+  const printing = new PrintNumber();
+  const dialing = new DialNumber();
+  telephone.addObserver(printing);
+  telephone.addObserver(dialing);
+  console.log(this.)
+//   telephone.addPhoneNumber("2347023232");
+//   telephone.dialPhoneNumber("2347023232");
