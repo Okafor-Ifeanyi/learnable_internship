@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 const connectionUrl = "mongodb://127.0.0.1:27017";
 
 mongoose.connect(connectionUrl, {
-    dbName: "hotel-room",
+    dbName: "hotel-management",
     useNewUrlParser: true,
     useUnifiedTopology: true
 }, (err) => {
