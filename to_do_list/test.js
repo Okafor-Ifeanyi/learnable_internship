@@ -16,8 +16,8 @@ const deleteList = (name) => {
     list.splice(value, 1)
 }
 
-
-updateList(0, "Chika")
+//  Again
+updateList(0, "Chika")   
 deleteList("beans")
 deleteList("Chika")
 
