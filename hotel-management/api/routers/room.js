@@ -1,5 +1,5 @@
 const express = require("express");
-const HotelName = require("../models/room");
+const HotelName = require("../models/room.model");
 const router = new express.Router();
 
 router.post("/rooms", async (req, res) => {
