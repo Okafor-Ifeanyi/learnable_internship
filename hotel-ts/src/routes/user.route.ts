@@ -9,4 +9,9 @@ router.post('/register', validate(authSchema), register);
 
 router.post('/login', validate(authSchema), login);
 
+router.get('/get', validate(authSchema), login);
+
+router.post('/update', validate(authSchema), login);
+
+
 export default router;

@@ -1,14 +1,14 @@
 import { Schema, model, Model } from 'mongoose';
 
-export interface IRoom {
+export interface room {
   name: string;
   roomType: Schema.Types.ObjectId,
   price: number
 }
 
-type RoomModel = Model<IRoom>;
+type RoomModel = Model<room>;
 
-const roomSchema = new Schema<IRoom, RoomModel>({
+const roomSchema = new Schema<room, RoomModel>({
   name: {
     type: String,
     required: [true, 'Name field is required'],
@@ -24,6 +24,6 @@ const roomSchema = new Schema<IRoom, RoomModel>({
   },
 });
 
-const Room = model<IRoom, RoomModel>('Room', roomSchema);
+const Room = model<room, RoomModel>('Room', roomSchema);
 
 export default Room;

@@ -35,3 +35,15 @@ export const login = async (req:Request, res:Response, next:NextFunction) => {
     next(error);
   }
 };
+
+// export const get = async (req:Request, res:Response, next:NextFunction) => {
+//   const id = req.body.id
+
+//   try {
+//     const user = await services.FindUser(id);
+//     if (!user) {
+//       throw { status: 404, message: 'User not found' };
+//     }
+//     if (!user.matchPassword(password)) {
+//       throw { status: 400, message: 'Invalid password' };
+//     }

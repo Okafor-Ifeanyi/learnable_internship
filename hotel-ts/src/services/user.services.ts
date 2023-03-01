@@ -1,6 +1,6 @@
 import User, { IUser } from '../models/user.models';
 
-export const FindUser = async (email: Pick<IUser, 'email'>) => {
+const FindUser = async (email: Pick<IUser, 'email'>) => {
   try {
     const user = await User.findOne({ email });
     return user;
@@ -9,10 +9,14 @@ export const FindUser = async (email: Pick<IUser, 'email'>) => {
   }
 };
 
-export const CreateUser = async (input: IUser) => {
+const CreateUser = async (input: IUser) => {
   try {
     await User.create(input);
   } catch (error) {
     console.log(error);
   }
 };
+
+const Get
+
+export {FindUser, CreateUser}

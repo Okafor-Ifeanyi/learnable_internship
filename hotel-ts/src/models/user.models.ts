@@ -1,7 +1,7 @@
 import { Schema, model, Model } from 'mongoose';
 import bcrypt from 'bcrypt';
 
-export interface IUser {
+export interface user {
   email: string;
   password: string;
   role: string;
@@ -11,9 +11,9 @@ interface UserMethods {
   matchPassword(password: string): Promise<boolean>;
 }
 
-type UserModel = Model<IUser, object, UserMethods>;
+type UserModel = Model<user, object, UserMethods>;
 
-const userSchema = new Schema<IUser, UserModel, UserMethods>(
+const userSchema = new Schema<user, UserModel, UserMethods>(
   {
     email: {
       type: String,
@@ -47,6 +47,6 @@ userSchema.methods.matchPassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-const User = model<IUser, UserModel>('User', userSchema);
+const User = model<user, UserModel>('User', userSchema);
 
-export default User;
+export default user;
